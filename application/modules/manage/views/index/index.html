@@ -1,0 +1,315 @@
+<?php
+	include($this->_base_name . '/inc/framework_header.html');
+?>
+
+
+	<!-- 面包屑 { -->
+	<div class="page-location" id="J_container_location">
+		<ul class="page-list clearfix">
+			<li><a href="/">管理首页</a></li>
+		</ul>
+	</div>
+	<!-- } 面包屑 -->
+
+
+	<!-- right container { -->
+	<div class="right-container" id="J_container_right">
+		<div class="container">
+			<!-- tab { -->
+			<div class="tabs-wrap">
+				<i class="tabs-line"></i>
+				<ul class="tabs-list clearfix">
+					<li><a href="javascript:;" >个人信息</a></li>
+					<li><a href="javascript:;" class="on">人员管理</a></li>
+					<li><a href="javascript:;">站点管理</a></li>
+					<li><a href="javascript:;">设备类型管理</a></li>
+					<li><a href="javascript:;">设备管理</a></li>
+					<li><a href="javascript:;">报警管理</a></li>
+				</ul>
+
+				<div class="right-btns">
+					<a href="javascript:;" class="button button-blue">添加站点</a>
+					<a href="javascript:;" class="button button-blue">添加站点</a>
+				</div>
+			</div>
+			<!-- } tab -->
+			
+			<!-- table { -->
+			<div class="table-container pt-w-100">
+				<div class="table-head">
+					<div class="row clearfix">
+						<div class="col pt-w-10 tc">区域</div>
+						<div class="col pt-w-20 tc">站点名称</div>
+						<div class="col pt-w-60 tc">数据</div>
+						<div class="col pt-w-10 tc">接收时间</div>
+					</div>
+				</div>
+				<div class="table-body">
+					<div class="row clearfix">
+						<div class="col pt-w-10 lh-93 tc">{{ item.area }}</div>
+						<div class="col pt-w-20 lh-93 tc">{{ item.name }}</div>
+						<div class="col pt-w-60 tc p5">
+							<table class="item-table">
+								<tr class="tr-header">
+									<td class="tc">{{ data.name }}</td>
+									<td class="tc">{{ data.name }}</td>
+								</tr>
+								<tr class="td-body">
+									<td class="tc">{{ data.value }}</td>
+									<td class="tc">{{ data.value }}</td>
+								</tr>
+							</table>
+						</div>
+						<div class="col pt-w-10 lh-93 tc">{{ item.rec_datetime }}</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col pt-w-10 tc">{{ item.area }}</div>
+						<div class="col pt-w-20 tc">{{ item.name }}</div>
+						<div class="col pt-w-60 tc">{{ item.data }}</div>
+						<div class="col pt-w-10 tc">{{ item.rec_datetime }}</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col pt-w-10 tc">{{ item.area }}</div>
+						<div class="col pt-w-20 tc">{{ item.name }}</div>
+						<div class="col pt-w-60 tc">{{ item.data }}</div>
+						<div class="col pt-w-10 tc">{{ item.rec_datetime }}</div>
+					</div>
+				</div>
+			</div>
+			<!-- } table -->
+
+            <!-- table { -->
+            <div class="table-container pt-w-100">
+                <div class="table-head">
+                    <div class="row clearfix">
+                        <div class="col pt-w-10 tc">菜单ID</div>
+                        <div class="col pt-w-60">菜单名称</div>
+                        <div class="col pt-w-30 tc">操作</div>
+                    </div>
+                </div>
+                <div class="table-body">
+
+                    <!-- 1级类别 { -->
+                    <div class="row clearfix">
+                        <div class="col pt-w-10 tc">1001</div>
+                        <div class="col pt-w-60 fz14 fwb">设置</div>
+                        <div class="col pt-w-30 tc">
+                            <a href="javascript:;" class="button button-blue">编辑</a>
+                            <a href="javascript:;" class="button button-gray">删除</a>
+                        </div>
+                    </div>
+
+                    <!-- 2级 { -->
+                    <div class="row clearfix">
+                        <div class="col pt-w-10 tc">1003</div>
+                        <div class="col pt-w-60 fz14"><i class="level-label">—</i>菜单设置</div>
+                        <div class="col pt-w-30 tc">
+                            <a href="javascript:;" class="button button-blue">编辑</a>
+                            <a href="javascript:;" class="button button-gray">删除</a>
+                        </div>
+                    </div>
+
+                    <!-- 3级 { -->
+                    <div class="row clearfix">
+                        <div class="col pt-w-10 tc">1006</div>
+                        <div class="col pt-w-60"><i class="level-label"></i><i class="level-label">—</i>菜单配置</div>
+                        <div class="col pt-w-30 tc">
+                            <a href="javascript:;" class="button button-blue">编辑</a>
+                            <a href="javascript:;" class="button button-gray">删除</a>
+                        </div>
+                    </div>
+                    <!-- }3级 -->
+
+                    <!-- 3级 { -->
+                    <div class="row clearfix">
+                        <div class="col pt-w-10 tc">1007</div>
+                        <div class="col pt-w-60"><i class="level-label"></i><i class="level-label">—</i>菜单添加</div>
+                        <div class="col pt-w-30 tc">
+                            <a href="javascript:;" class="button button-blue">编辑</a>
+                            <a href="javascript:;" class="button button-gray">删除</a>
+                        </div>
+                    </div>
+                    <!-- }3级 -->
+                    <!-- } 2级 -->
+
+                    <!-- 2级 { -->
+                    <div class="row clearfix">
+                        <div class="col pt-w-10 tc">1004</div>
+                        <div class="col pt-w-60 fz14"><i class="level-label">—</i>基本设置</div>
+                        <div class="col pt-w-30 tc">
+                            <a href="javascript:;" class="button button-blue">编辑</a>
+                            <a href="javascript:;" class="button button-gray">删除</a>
+                        </div>
+                    </div>
+                    <!-- } 2级 -->
+                    <!-- } 1级类别 -->
+
+                    <!-- 1级类别 { -->
+                    <div class="row clearfix">
+                        <div class="col pt-w-10 tc">1002</div>
+                        <div class="col pt-w-60 fz14 fwb">管理员</div>
+                        <div class="col pt-w-30 tc">
+                            <a href="javascript:;" class="button button-blue">编辑</a>
+                            <a href="javascript:;" class="button button-gray">删除</a>
+                        </div>
+                    </div>
+                    <!-- 2级 { -->
+                    <div class="row clearfix">
+                        <div class="col pt-w-10 tc">1005</div>
+                        <div class="col pt-w-60 fz14"><i class="level-label">—</i>管理员列表</div>
+                        <div class="col pt-w-30 tc">
+                            <a href="javascript:;" class="button button-blue">编辑</a>
+                            <a href="javascript:;" class="button button-gray">删除</a>
+                        </div>
+                    </div>
+                    <!-- } 2级 -->
+                    <!-- } 1级类别 -->
+                </div>
+            </div>
+            <!-- } table -->
+
+			<!-- 分页 { -->
+			<div class="page">
+				<div class="page-view">
+					<a href="javascript:;">首页</a>
+					<span class="disabled">上一页</span>
+					<span>1</span>
+					<a href="javascript:;">2</a>
+					<a href="javascript:;">下一页</a>
+					<a href="javascript:;">尾页</a>
+				</div>
+			</div>
+			<!-- } 分页 -->
+
+			<!-- forms { -->
+			<div class="forms">
+				<div class="row clearfix">
+					<div class="fl col-label pt-w-15">文本框禁用</div>
+					<div class="fl pt-w-85"><input type="text" class="input px-w-300" v-model="form.uid" disabled="disabled"></div>
+				</div>
+				<div class="row clearfix">
+					<div class="fl col-label pt-w-15">文本框</div>
+					<div class="fl pt-w-85"><input type="text" class="input px-w-500" v-model="form.uname"></div>
+				</div>
+				<div class="row clearfix">
+					<div class="fl col-label pt-w-15">文本域</div>
+					<div class="fl pt-w-85"><textarea class="textarea px-w-500"></textarea></div>
+				</div>
+				<div class="row clearfix">
+					<div class="fl col-label pt-w-15">下拉框</div>
+					<div class="fl pt-w-85">
+						<div class="select">
+							<select>
+								<option value=""> - 请选择 - </option>
+								<option value="">北京</option>
+								<option value="">上海</option>
+								<option value="">广州</option>
+								<option value="">深圳</option>
+							</select>
+						</div>
+						<div class="select">
+							<select>
+								<option value=""> - 请选择 - </option>
+								<option value="">北京</option>
+								<option value="">上海</option>
+								<option value="">广州</option>
+								<option value="">深圳</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="fl col-label pt-w-15">单选框</div>
+					<div class="fl pt-w-85">
+					    <label class="label-ele">
+					        <input class="radio" type="radio" name="form_gid" value="1">
+					        <span class="radioInput"></span>
+					        <em>超级管理员</em>
+					    </label>
+					    <label class="label-ele">
+					        <input class="radio" type="radio" name="form_gid" value="2">
+					        <span class="radioInput"></span>
+					        <em>普通管理员</em>
+					    </label>
+					</div>
+				</div>
+				<div class="row row-height-auto clearfix">
+					<div class="fl col-label pt-w-15">复选框</div>
+					<div class="fl pt-w-85">
+					    <label class="label-ele">
+					        <input class="radio" type="checkbox">
+					        <span class="checkbox radioInput"></span>
+					        <em>复现项目1</em>
+					    </label>
+					    <label class="label-ele">
+					        <input class="radio" type="checkbox">
+					        <span class="checkbox radioInput"></span>
+					        <em>复现项目2</em>
+					    </label>
+					    <label class="label-ele">
+					        <input class="radio" type="checkbox">
+					        <span class="checkbox radioInput"></span>
+					        <em>复现项目3</em>
+					    </label>
+					</div>
+				</div>
+
+				<div class="row clearfix">
+					<div class="fl col-label pt-w-15">&nbsp;</div>
+					<div class="fl pt-w-85">
+						<a href="javascript:;" class="button button-blue">编辑个人信息</a>
+						<a href="javascript:;" class="button button-gray">取消</a>
+					</div>
+				</div>
+			</div>
+			<!-- } forms -->
+
+
+			<!-- table { -->
+			<div class="table-container pt-w-100">
+				<div class="table-head">
+					<div class="row clearfix">
+						<div class="col pt-w-50 tc">icon</div>
+						<div class="col pt-w-50 tc">样式名</div>
+					</div>
+				</div>
+				<div class="table-body">
+					<div class="row clearfix">
+						<div class="col pt-w-50 tc"><i class="icon icon-set lh-40"></i></div>
+						<div class="col pt-w-50 tc">icon-set</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col pt-w-50 tc"><i class="icon icon-users lh-40"></i></div>
+						<div class="col pt-w-50 tc">icon-users</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col pt-w-50 tc"><i class="icon icon-logout lh-40"></i></div>
+						<div class="col pt-w-50 tc">icon-logout</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col pt-w-50 tc"><i class="icon icon-arrows lh-40"></i></div>
+						<div class="col pt-w-50 tc">icon-arrows</div>
+					</div>
+                    <div class="row clearfix">
+                        <div class="col pt-w-50 tc">
+                            <i class="icon icon-home lh-40"></i>
+                        </div>
+                        <div class="col pt-w-50 tc">icon-home</div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="col pt-w-50 tc">
+                            <i class="icon icon-file lh-40"></i>
+                        </div>
+                        <div class="col pt-w-50 tc">icon-file</div>
+                    </div>
+				</div>
+			</div>
+			<!-- } table -->
+		</div>
+	</div>
+	<!-- } right container -->
+
+
+<?php
+	include($this->_base_name . '/inc/framework_footer.html');
+?>

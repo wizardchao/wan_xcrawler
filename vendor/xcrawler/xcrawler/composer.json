@@ -1,0 +1,27 @@
+{
+    "name": "xcrawler/xcrawler",
+    "description": "A fast, simple and powerful PHP web crawler (scraper/spider) 快速、简洁且强大的爬虫/采集框架",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "王彦",
+            "email": "453351466@qq.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0.8",
+        "predis/predis": "^1.1",
+        "monolog/monolog": "^1.23",
+        "guzzlehttp/guzzle": "^6.3",
+        "symfony/dom-crawler": "~3.4",
+        "symfony/css-selector": "~3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "XCrawler\\": "src/"
+        },
+        "files": [
+            "src/Helpers.php"
+        ]
+    }
+}

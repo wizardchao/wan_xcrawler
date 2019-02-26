@@ -1,0 +1,7 @@
+{
+    "name": "root/hxframework.com",
+    "require": {
+        "tightenco/collect": "^5.7",
+        "xcrawler/xcrawler": "^1.0"
+    }
+}
