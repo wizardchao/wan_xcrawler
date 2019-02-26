@@ -1,5 +1,4 @@
 <?php
-require 'vendor/autoload.php';
 
 use XCrawler\XCrawler;
 use Symfony\Component\DomCrawler\Crawler;
