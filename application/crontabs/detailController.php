@@ -9,7 +9,7 @@ $xcrawler = new XCrawler([
     'requests' => function() {
         // while ($data = redis()->rpop('dytt8:detail_queue')) {
             // $data = json_decode($data, true);
-            // $data = json_decode($data, true);
+            $data = json_decode($data, true);
             $data=array(
               'url' => 'https://hot.cnbeta.com/articles/comic/820893',
             );
