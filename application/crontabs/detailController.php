@@ -11,7 +11,7 @@ $xcrawler = new XCrawler([
             // $data = json_decode($data, true);
             $data = json_decode($data, true);
             $data=array(
-              'url' => 'https://hot.cnbeta.com/articles/comic/820893',
+              'url' => 'https://hot.cnbeta.com/articles/comic/826951',
             );
             $request = [
                 'uri' => $data['url'],

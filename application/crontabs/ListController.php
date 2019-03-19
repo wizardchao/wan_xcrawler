@@ -1,5 +1,4 @@
 <?php
-require 'vendor/autoload.php';
 
 use XCrawler\XCrawler;
 use Symfony\Component\DomCrawler\Crawler;
@@ -58,29 +57,29 @@ $xcrawler = new XCrawler([
 $xcrawler->run();
 
 
-$xcrawler = new XCrawler([
-    'name' => 'dytt8:detail',
-    'concurrency' => 3,
-    'requests' => function() {
-        while ($data = redis()->rpop('dytt8:detail_queue')) {
-            $data = json_decode($data, true);
-            $request = [
-                'uri' => $data['url'],
-                'callback_data' => $data,
-            ];
-            yield $request;
-        }
-    },
-    'success' => function($result, $request, $xcrawler) {
-        $result = iconv('GBK', 'UTF-8', $result);
-        $crawler = new Crawler();
-        $crawler->addHtmlContent($result);
-
-        $data = $request['callback_data'];
-        $crawler->filter('td[style="WORD-WRAP: break-word"] a')->each(function (Crawler $node, $i) use (&$data) {
-            $data['download_links'][] = $node->attr('href');
-        });
-        var_dump($data);
-    }
-]);
-$xcrawler->run();
+// $xcrawler = new XCrawler([
+//     'name' => 'dytt8:detail',
+//     'concurrency' => 3,
+//     'requests' => function() {
+//         while ($data = redis()->rpop('dytt8:detail_queue')) {
+//             $data = json_decode($data, true);
+//             $request = [
+//                 'uri' => $data['url'],
+//                 'callback_data' => $data,
+//             ];
+//             yield $request;
+//         }
+//     },
+//     'success' => function($result, $request, $xcrawler) {
+//         $result = iconv('GBK', 'UTF-8', $result);
+//         $crawler = new Crawler();
+//         $crawler->addHtmlContent($result);
+//
+//         $data = $request['callback_data'];
+//         $crawler->filter('td[style="WORD-WRAP: break-word"] a')->each(function (Crawler $node, $i) use (&$data) {
+//             $data['download_links'][] = $node->attr('href');
+//         });
+//         var_dump($data);
+//     }
+// ]);
+// $xcrawler->run();

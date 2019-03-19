@@ -12,6 +12,6 @@
     define('DOMAIN_MANAGE', '//manage.hxframework.com');
     define('DOMAIN_STATIC', '//static.hxframework.com');
     define('DOMAIN_API', '//api.hxframework.com');
-    define('DOMAIN_FILE', '//file.hxframework.com');
-
+    define('DOMAIN_FILE', '//xcrawler.test:81/file/cnbeta');
+    define('DOMAIN_IMG', '//xcrawler.test:81/file/cnbeta_detail');
     define('TOKEN_SALT','hxframework.com');

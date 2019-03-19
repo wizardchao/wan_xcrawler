@@ -24,6 +24,6 @@ $application = new Star_Application(
     APPLICATION_PATH . '/configs/crontab.ini',
     realpath(APPLICATION_PATH . '/../library')
 );
-$application->bootstrap()->setDefaultControllerName('crontab')->setDefaultActionName('index')->run();
+$application->bootstrap()->setDefaultControllerName('crontab')->setDefaultActionName('detail')->run();
 // $application->bootstrap()->setDefaultControllerName('crontab')->run();
 ?>
